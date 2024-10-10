@@ -4,7 +4,12 @@ import reportWebVitals from './reportWebVitals';
 import router from './router';
 import { RouterProvider } from 'react-router-dom';
 
-import './assets/css/adminlte.min.css';
+// Import AdminLTE CSS
+import 'admin-lte/dist/css/adminlte.min.css';
+
+// Import Bootstrap and dependencies
+import 'jquery/dist/jquery.min.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -8,38 +8,43 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import NotFound from "../pages/NotFound";
 import Logout from "../pages/Logout";
+import AdminLayout from "../layouts/AdminLayout";
 
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <DefaultLayout />,
+        element: <AdminLayout />,
         children: [
             {
                 index: true,
                 element: <Dashboard />,
             },
             {
+                path: 'dashboard',
+                element: <Dashboard />,
+            },
+            {
                 path: "setting",
                 element: <Setting />,
             },
-            {
-                path: "login",
-                element: <Login />,
-            },
-            {
-                path: "register",
-                element: <Register />,
-            },
-            {
-                path: "logout",
-                element: <Logout />,
-            },
-            {
-                path: "*",
-                element: <NotFound />
-            }
         ]
+    },
+    {
+        path: "login",
+        element: <Login />,
+    },
+    {
+        path: "register",
+        element: <Register />,
+    },
+    {
+        path: "logout",
+        element: <Logout />,
+    },
+    {
+        path: "*",
+        element: <NotFound />
     }
 ]);
 
