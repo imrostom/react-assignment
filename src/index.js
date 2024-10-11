@@ -4,17 +4,19 @@ import reportWebVitals from './reportWebVitals';
 import router from './router';
 import { RouterProvider } from 'react-router-dom';
 
-// Import AdminLTE CSS
 import 'admin-lte/dist/css/adminlte.min.css';
+import 'react-toastify/dist/ReactToastify.css';
 
-// Import Bootstrap and dependencies
 import 'jquery/dist/jquery.min.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+import { ToastContainer } from 'react-toastify';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <ToastContainer />
   </React.StrictMode>
 );
 

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import adminLogo from "../assets/img/AdminLTELogo.png"
 
 function Sidebar() {
@@ -13,19 +13,27 @@ function Sidebar() {
             <nav className="mt-2">
                 <ul className="nav sidebar-menu flex-column">
                     <li className="nav-item">
-                        <Link to="/dashboard" className="nav-link">
+                        <NavLink to="/dashboard" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
                             <i className="nav-icon bi bi-speedometer"></i>
                             <p>Dashboard</p>
-                        </Link>
-                        <Link to="/setting" className="nav-link">
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="/news" className="nav-link">
+                            <i className="nav-icon bi bi-newspaper"></i>
+                            <p>News</p>
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink to="/setting" className="nav-link">
                             <i className="nav-icon bi bi-gear"></i>
                             <p>Setting</p>
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
             </nav>
         </div>
-    </aside>
+    </aside >
 }
 
 export default Sidebar;

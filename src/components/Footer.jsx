@@ -1,11 +1,9 @@
 function Footer() {
-    return <footer className="app-footer">
-        <div className="float-end d-none d-sm-inline">Anything you want</div>
+    return <footer className="app-footer text-center">
         <strong>
-            Copyright &copy; 2014-2024&nbsp; <a href="https://adminlte.io" className="text-decoration-none">AdminLTE.io</a>.
+            &copy;Right by <a href="https://rostom.xyz" target="_blank">Rostom Ali</a>. All rights reserved.
         </strong>
-        All rights reserved.
-    </footer>;
+    </footer>
 }
 
 export default Footer;
