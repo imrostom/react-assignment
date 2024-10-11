@@ -38,7 +38,7 @@ function Login() {
         <div className="login-page bg-body-secondary">
             <div className="login-box">
                 <div className="login-logo">
-                    <Link to="/"><b>Admin</b>LTE</Link>
+                    <Link to="/"><b>News</b>Portal</Link>
                 </div>
                 <div className="card">
                     <div className="card-body login-card-body">
